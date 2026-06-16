@@ -1,1 +1,1357 @@
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>520 For JING WEN 💖</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overflow:hidden;
+  font-family:Arial;
+  background:black;
+  color:white;
+}
+
+/* ================= 星空背景 ================= */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top,#2b0015,#000000 70%);
+
+  animation:bgMove 12s infinite alternate;
+
+  z-index:-5;
+}
+
+@keyframes bgMove{
+
+  from{
+    filter:hue-rotate(0deg);
+  }
+
+  to{
+    filter:hue-rotate(25deg);
+  }
+}
+
+canvas{
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  z-index:-4;
+
+  transition:1s;
+}
+
+/* ================= 开场动画 ================= */
+
+#intro{
+
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  background:black;
+
+  z-index:9999;
+
+  animation:introFade 5s forwards;
+}
+
+#intro h1{
+
+  font-size:65px;
+
+  color:#ff4d88;
+
+  text-shadow:
+  0 0 20px #ff4d88,
+  0 0 50px #ff4d88;
+
+  animation:zoomGlow 2s infinite alternate;
+}
+
+#intro p{
+
+  margin-top:20px;
+
+  font-size:22px;
+
+  letter-spacing:4px;
+
+  opacity:.8;
+}
+
+@keyframes zoomGlow{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.08);
+  }
+}
+
+@keyframes introFade{
+
+  0%{
+    opacity:1;
+  }
+
+  80%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:0;
+    visibility:hidden;
+  }
+}
+
+/* ================= 页面 ================= */
+
+.page{
+  position:fixed;
+  inset:0;
+  display:none;
+}
+
+.page.active{
+  display:flex;
+}
+
+/* ================= 首页 ================= */
+
+#login{
+
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* 光圈 */
+
+#login::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:550px;
+  height:550px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,77,136,.35),
+  transparent 70%);
+
+  animation:pulse 4s infinite;
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+    opacity:.5;
+  }
+
+  50%{
+    transform:scale(1.2);
+    opacity:.9;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:.5;
+  }
+}
+
+/* ================= 漂浮照片 ================= */
+
+.floating-card{
+
+  position:absolute;
+
+  width:230px;
+  height:150px;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 0 30px rgba(255,77,136,.5);
+
+  animation:float 6s infinite ease-in-out;
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,.15);
+
+  background:rgba(255,255,255,.05);
+
+  transition:.5s;
+}
+
+.floating-card:hover{
+
+  transform:scale(1.08) rotate(2deg);
+
+  box-shadow:
+  0 0 40px #ff4d88,
+  0 0 80px rgba(255,77,136,.6);
+}
+
+.floating-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.card1{
+  top:8%;
+  left:5%;
+}
+
+.card2{
+  top:12%;
+  right:5%;
+  animation-delay:1s;
+}
+
+.card3{
+  bottom:10%;
+  left:7%;
+  animation-delay:2s;
+}
+
+.card4{
+  bottom:8%;
+  right:7%;
+  animation-delay:3s;
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-18px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+}
+
+/* ================= 标题 ================= */
+
+h2{
+
+  font-size:52px;
+
+  color:#ff4d88;
+
+  text-shadow:
+  0 0 20px #ff4d88,
+  0 0 50px #ff4d88;
+
+  z-index:2;
+
+  animation:titleBeat 2s infinite alternate;
+}
+
+@keyframes titleBeat{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.06);
+  }
+}
+
+/* ================= 名字 ================= */
+
+#mainName{
+
+  margin-top:15px;
+
+  font-size:28px;
+
+  letter-spacing:6px;
+
+  color:white;
+
+  text-shadow:
+  0 0 10px white,
+  0 0 20px #ff4d88;
+
+  z-index:2;
+}
+
+/* ================= 按钮 ================= */
+
+button{
+
+  margin-top:20px;
+
+  padding:14px 35px;
+
+  border:none;
+
+  border-radius:40px;
+
+  font-size:17px;
+
+  color:white;
+
+  cursor:pointer;
+
+  background:
+  linear-gradient(45deg,
+  #ff4d88,
+  #ff2e63);
+
+  box-shadow:
+  0 0 20px #ff4d88;
+
+  transition:.3s;
+
+  z-index:2;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+button::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:40px;
+
+  background:
+  linear-gradient(
+  45deg,
+  transparent,
+  rgba(255,255,255,.4),
+  transparent);
+
+  transform:translateX(-100%);
+}
+
+button:hover::before{
+
+  animation:shine 1s;
+}
+
+@keyframes shine{
+
+  to{
+    transform:translateX(100%);
+  }
+}
+
+button:hover{
+
+  transform:scale(1.1);
+
+  box-shadow:
+  0 0 40px #ff4d88;
+}
+
+/* ================= 倒数 ================= */
+
+#timer{
+
+  position:fixed;
+
+  top:15px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  z-index:1000;
+
+  font-size:18px;
+
+  text-shadow:
+  0 0 15px #ff4d88;
+}
+
+/* ================= 爱心照片墙 ================= */
+
+#photo{
+
+  justify-content:center;
+  align-items:center;
+}
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(9,80px);
+
+  gap:8px;
+}
+
+.grid div{
+
+  width:80px;
+  height:80px;
+}
+
+.grid img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  border-radius:14px;
+
+  opacity:0;
+
+  transform:scale(0);
+
+  transition:.5s;
+
+  box-shadow:
+  0 0 12px rgba(255,77,136,.4);
+}
+
+.show{
+
+  opacity:1 !important;
+
+  transform:scale(1) !important;
+}
+
+/* ================= LOVE ================= */
+
+#love{
+
+  position:absolute;
+
+  top:45%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  font-size:130px;
+
+  opacity:0;
+
+  text-shadow:
+  0 0 20px #ff4d88,
+  0 0 60px #ff4d88;
+
+  animation:loveBeat 1s infinite;
+}
+
+@keyframes loveBeat{
+
+  0%{
+    transform:translate(-50%,-50%) scale(1);
+  }
+
+  50%{
+    transform:translate(-50%,-50%) scale(1.1);
+  }
+
+  100%{
+    transform:translate(-50%,-50%) scale(1);
+  }
+}
+
+/* ================= 打字 ================= */
+
+#typing{
+
+  position:absolute;
+
+  bottom:35px;
+
+  width:100%;
+
+  text-align:center;
+
+  font-size:22px;
+
+  white-space:pre-line;
+
+  text-shadow:
+  0 0 10px #ff4d88;
+}
+
+/* ================= 视频页 ================= */
+
+#videoPage{
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background:rgba(0,0,0,.8);
+  backdrop-filter:blur(10px);
+}
+
+/* ✅ FIXED VIDEO SIZE */
+#loveVideo{
+  width:90%;
+  max-width:700px;   /* 🔥 reduced from 950px */
+  max-height:75vh;   /* prevents overflow */
+  border-radius:25px;
+  box-shadow:0 0 50px rgba(255,77,136,.6);
+}
+
+/* mobile fix */
+@media(max-width:768px){
+  #loveVideo{
+    width:95%;
+    max-width:100%;
+    max-height:60vh;
+  }
+}
+
+/* ================= 爱心雨 ================= */
+
+.heart{
+
+  position:fixed;
+
+  top:-20px;
+
+  color:#ff4d88;
+
+  pointer-events:none;
+
+  animation:fall linear forwards;
+
+  z-index:999;
+}
+
+@keyframes fall{
+
+  to{
+    transform:translateY(110vh);
+    opacity:0;
+  }
+}
+
+/* ================= 花瓣 ================= */
+
+.petal{
+
+  position:fixed;
+
+  top:-20px;
+
+  pointer-events:none;
+
+  z-index:999;
+
+  animation:petalFall linear forwards;
+}
+
+@keyframes petalFall{
+
+  to{
+
+    transform:
+    translateY(110vh)
+    rotate(360deg);
+
+    opacity:0;
+  }
+}
+
+/* ================= 流星 ================= */
+
+.shooting-star{
+
+  position:fixed;
+
+  width:2px;
+  height:120px;
+
+  background:
+  linear-gradient(white,transparent);
+
+  transform:rotate(45deg);
+
+  animation:shoot 2s linear forwards;
+}
+
+@keyframes shoot{
+
+  from{
+    transform:translate(0,0) rotate(45deg);
+    opacity:1;
+  }
+
+  to{
+    transform:translate(-700px,700px) rotate(45deg);
+    opacity:0;
+  }
+}
+
+/* ================= LOVE POPUP ================= */
+
+#popupLove{
+
+  position:fixed;
+
+  top:30px;
+
+  right:-400px;
+
+  padding:18px 30px;
+
+  border-radius:20px;
+
+  background:rgba(255,77,136,.2);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,.2);
+
+  font-size:18px;
+
+  z-index:9999;
+
+  box-shadow:
+  0 0 25px rgba(255,77,136,.5);
+
+  transition:1s;
+}
+
+/* ================= 手机适配 ================= */
+
+@media(max-width:768px){
+
+  h2{
+    font-size:34px;
+
+    animation:
+    titleBeat 2s infinite alternate,
+    mobileGlow 3s infinite;
+  }
+
+  @keyframes mobileGlow{
+
+    0%{
+      filter:brightness(1);
+    }
+
+    50%{
+      filter:brightness(1.4);
+    }
+
+    100%{
+      filter:brightness(1);
+    }
+  }
+
+  .floating-card{
+    width:140px;
+    height:100px;
+  }
+
+  .grid{
+    grid-template-columns:repeat(9,35px);
+    gap:4px;
+  }
+
+  .grid div{
+    width:35px;
+    height:35px;
+  }
+
+  #love{
+    font-size:60px;
+  }
+
+  #typing{
+    font-size:15px;
+    padding:0 10px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 开场 -->
+
+<div id="intro">
+
+  <h1>💖 MS.THUAN 💖</h1>
+
+  <p>WELCOME TO OUR LOVE STORY</p>
+
+</div>
+
+<!-- 音乐 -->
+
+<audio id="bgm" loop>
+
+  <source src="music/love.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- 星空 -->
+
+<canvas id="sky"></canvas>
+
+<!-- 倒数 -->
+
+<div id="timer">
+  💞 初始化中...
+</div>
+
+<!-- 首页 -->
+
+<div id="login" class="page active">
+
+  <div class="floating-card card1">
+    <img src="img/1.jpeg">
+  </div>
+
+  <div class="floating-card card2">
+    <img src="img/2.jpeg">
+  </div>
+
+  <div class="floating-card card3">
+    <img src="img/3.jpeg">
+  </div>
+
+  <div class="floating-card card4">
+    <img src="img/4.jpeg">
+  </div>
+
+  <h2>💖 HAPPY 520 💖</h2>
+
+  <div id="mainName">
+    JING WEN ❤️
+  </div>
+
+  <button onclick="start()">
+    进入我们的世界 ❤️
+  </button>
+
+  <button onclick="openVideo()">
+    我们的回忆 🎥
+  </button>
+
+</div>
+
+<!-- 爱心墙 -->
+
+<div id="photo" class="page">
+
+  <div class="grid" id="grid"></div>
+
+</div>
+
+<!-- 视频页 -->
+<div id="videoPage" class="page">
+
+  <video id="loveVideo" controls autoplay width="100%">
+    <source src="./video/love.mp4" type="video/mp4">
+  </video>
+
+  <button onclick="backHome()">
+    返回 ❤️
+  </button>
+
+</div>
+
+<!-- LOVE -->
+
+<div id="love">
+
+  LOVE ❤️
+
+</div>
+
+<!-- 打字 -->
+
+<div id="typing"></div>
+
+<!-- POPUP -->
+
+<div id="popupLove">
+
+  You are my favorite person forever ❤️
+
+</div>
+
+<script>
+
+/* ================= AUDIO FIX (CLEAN WORKING VERSION) ================= */
+
+const music = document.getElementById("bgm");
+music.loop = true;
+music.volume = 0;
+
+/* Unlock audio for mobile + browser policy */
+function unlockAudio(){
+  music.play()
+  .then(()=>{
+    music.pause();
+    music.currentTime = 0;
+  })
+  .catch(()=>{});
+}
+
+/* First user interaction unlock */
+document.addEventListener("click", unlockAudio, { once:true });
+
+/* Proper start function with sound */
+function start(){
+
+  music.play().catch(()=>{});
+
+  let vol = 0;
+  music.volume = 0;
+
+  let fade = setInterval(()=>{
+    vol += 0.05;
+
+    if(vol >= 1){
+      vol = 1;
+      clearInterval(fade);
+    }
+
+    music.volume = vol;
+
+  },200);
+
+  document.getElementById("login").classList.remove("active");
+  document.getElementById("photo").classList.add("active");
+
+  firework();
+  buildHeart();
+}
+/* ================= 星空 ================= */
+
+let c=document.getElementById("sky");
+
+let ctx=c.getContext("2d");
+
+function resize(){
+
+  c.width=window.innerWidth;
+
+  c.height=window.innerHeight;
+}
+
+resize();
+
+window.addEventListener("resize",resize);
+
+let stars=[];
+
+for(let i=0;i<220;i++){
+
+  stars.push({
+
+    x:Math.random()*c.width,
+    y:Math.random()*c.height,
+    r:Math.random()*2
+  });
+}
+
+function draw(){
+
+  ctx.clearRect(0,0,c.width,c.height);
+
+  ctx.fillStyle="white";
+
+  stars.forEach(s=>{
+
+    ctx.beginPath();
+
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+
+    ctx.globalAlpha=Math.random();
+
+    ctx.fill();
+
+    ctx.globalAlpha=1;
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+
+/* ================= 星空视差 ================= */
+
+document.addEventListener("mousemove",e=>{
+
+  let moveX=(e.clientX/window.innerWidth-.5)*20;
+
+  let moveY=(e.clientY/window.innerHeight-.5)*20;
+
+  c.style.transform=
+  `translate(${moveX}px,${moveY}px)`;
+});
+
+/* ================= 倒数 ================= */
+
+let targetDate=new Date("2026-05-20 00:00:00");
+
+function updateTimer(){
+
+  let now=new Date();
+
+  let diff=targetDate-now;
+
+  if(diff<=0){
+
+    document.getElementById("timer").innerHTML=
+    "💖 HAPPY 520 💖";
+
+    return;
+  }
+
+  let d=Math.floor(diff/(1000*60*60*24));
+
+  let h=Math.floor(diff/(1000*60*60))%24;
+
+  let m=Math.floor(diff/(1000*60))%60;
+
+  let s=Math.floor(diff/1000)%60;
+
+  document.getElementById("timer").innerHTML=
+  `💞 距离520还有 ${d}天 ${h}小时 ${m}分 ${s}秒`;
+}
+
+setInterval(updateTimer,1000);
+
+updateTimer();
+
+/* ================= 烟花 ================= */
+
+function firework(){
+
+  for(let i=0;i<40;i++){
+
+    let f=document.createElement("div");
+
+    f.innerHTML="✨";
+
+    f.style.position="fixed";
+
+    f.style.left="50%";
+
+    f.style.top="50%";
+
+    f.style.zIndex=9999;
+
+    f.style.fontSize=
+    15+Math.random()*25+"px";
+
+    document.body.appendChild(f);
+
+    let angle=Math.random()*360;
+
+    let dist=100+Math.random()*300;
+
+    let x=Math.cos(angle)*dist;
+
+    let y=Math.sin(angle)*dist;
+
+    f.animate([
+
+      {
+        transform:"translate(0,0)",
+        opacity:1
+      },
+
+      {
+        transform:`translate(${x}px,${y}px)`,
+        opacity:0
+      }
+
+    ],{
+
+      duration:1500,
+      easing:"ease-out"
+    });
+
+    setTimeout(()=>{
+      f.remove();
+    },1500);
+  }
+}
+
+
+
+/* ================= 爱心墙 ================= */
+
+function buildHeart(){
+
+  let grid=document.getElementById("grid");
+
+  grid.innerHTML="";
+
+  let imgs=[];
+
+  for(let i=1;i<=45;i++){
+
+    imgs.push(`img/${i}.jpeg`);
+  }
+
+  let shape=[
+
+  [0,0,1,1,0,1,1,0,0],
+  [0,1,1,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1,1,1],
+  [1,1,1,1,1,1,1,1,1],
+  [0,1,1,1,1,1,1,1,0],
+  [0,0,1,1,1,1,1,0,0],
+  [0,0,0,1,1,1,0,0,0],
+  [0,0,0,0,1,0,0,0,0]
+
+  ];
+
+  let index=0;
+
+  shape.forEach(row=>{
+
+    row.forEach(col=>{
+
+      let div=document.createElement("div");
+
+      if(col && index<imgs.length){
+
+        let img=document.createElement("img");
+
+        img.src=imgs[index];
+
+        div.appendChild(img);
+
+        index++;
+      }
+
+      grid.appendChild(div);
+    });
+  });
+
+  let all=document.querySelectorAll(".grid img");
+
+  all.forEach((img,i)=>{
+
+    setTimeout(()=>{
+
+      img.classList.add("show");
+
+    },i*70);
+
+  });
+
+  setTimeout(showLove,1600);
+}
+
+/* ================= LOVE ================= */
+
+function showLove(){
+
+  let love=document.getElementById("love");
+
+  love.style.opacity=1;
+
+  setTimeout(typeText,1800);
+}
+
+/* ================= 打字 ================= */
+
+function typeText(){
+
+  let text=`
+
+我真的很爱你 ❤️
+
+不是520才爱，
+是每天都爱。
+
+谢谢你来到我的世界 💖
+
+未来的每一天，
+都想陪着你。
+
+🌷 Happy 520 🌷
+
+`;
+
+  let box=document.getElementById("typing");
+
+  box.innerHTML="";
+
+  let i=0;
+
+  let t=setInterval(()=>{
+
+    box.innerHTML+=text[i];
+
+    i++;
+
+    if(i>=text.length){
+
+      clearInterval(t);
+    }
+
+  },50);
+}
+
+/* ================= 视频页 ================= */
+
+function openVideo(){
+
+  document.getElementById("login")
+  .classList.remove("active");
+
+  document.getElementById("videoPage")
+  .classList.add("active");
+}
+
+function backHome(){
+
+  document.getElementById("videoPage")
+  .classList.remove("active");
+
+  document.getElementById("login")
+  .classList.add("active");
+}
+
+/* ================= 爱心雨 ================= */
+
+setInterval(()=>{
+
+  let heart=document.createElement("div");
+
+  heart.className="heart";
+
+  heart.innerHTML="❤️";
+
+  heart.style.left=Math.random()*100+"vw";
+
+  heart.style.fontSize=
+  15+Math.random()*30+"px";
+
+  heart.style.animationDuration=
+  3+Math.random()*3+"s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>{
+    heart.remove();
+  },6000);
+
+},250);
+
+/* ================= 花瓣雨 ================= */
+
+setInterval(()=>{
+
+  let p=document.createElement("div");
+
+  p.className="petal";
+
+  p.innerHTML="🌸";
+
+  p.style.left=Math.random()*100+"vw";
+
+  p.style.fontSize=
+  15+Math.random()*20+"px";
+
+  p.style.animationDuration=
+  5+Math.random()*5+"s";
+
+  document.body.appendChild(p);
+
+  setTimeout(()=>{
+    p.remove();
+  },10000);
+
+},600);
+
+/* ================= 流星 ================= */
+
+setInterval(()=>{
+
+  let s=document.createElement("div");
+
+  s.className="shooting-star";
+
+  s.style.top=Math.random()*40+"vh";
+
+  s.style.left=Math.random()*100+"vw";
+
+  document.body.appendChild(s);
+
+  setTimeout(()=>{
+    s.remove();
+  },2000);
+
+},2200);
+
+/* ================= 鼠标星光 ================= */
+
+document.addEventListener("mousemove",e=>{
+
+  let star=document.createElement("div");
+
+  star.innerHTML="✨";
+
+  star.style.position="fixed";
+
+  star.style.left=e.clientX+"px";
+
+  star.style.top=e.clientY+"px";
+
+  star.style.pointerEvents="none";
+
+  star.style.fontSize="14px";
+
+  star.style.zIndex="9999";
+
+  document.body.appendChild(star);
+
+  star.animate([
+
+    {
+      opacity:1,
+      transform:"translateY(0) scale(1)"
+    },
+
+    {
+      opacity:0,
+      transform:"translateY(-20px) scale(0)"
+    }
+
+  ],{
+    duration:800
+  });
+
+  setTimeout(()=>{
+    star.remove();
+  },800);
+});
+
+/* ================= 点击爱心爆炸 ================= */
+
+document.addEventListener("click",e=>{
+
+  for(let i=0;i<12;i++){
+
+    let h=document.createElement("div");
+
+    h.innerHTML="💖";
+
+    h.style.position="fixed";
+
+    h.style.left=e.clientX+"px";
+
+    h.style.top=e.clientY+"px";
+
+    h.style.pointerEvents="none";
+
+    h.style.zIndex=9999;
+
+    h.style.fontSize=
+    15+Math.random()*20+"px";
+
+    document.body.appendChild(h);
+
+    let x=(Math.random()-.5)*220;
+
+    let y=(Math.random()-.5)*220;
+
+    h.animate([
+
+      {
+        transform:"translate(0,0)",
+        opacity:1
+      },
+
+      {
+        transform:`translate(${x}px,${y}px)`,
+        opacity:0
+      }
+
+    ],{
+      duration:1200,
+      easing:"ease-out"
+    });
+
+    setTimeout(()=>{
+      h.remove();
+    },1200);
+  }
+});
+
+/* ================= LOVE POPUP ================= */
+
+setTimeout(()=>{
+
+  let p=document.getElementById("popupLove");
+
+  p.style.right="30px";
+
+  setTimeout(()=>{
+
+    p.style.right="-500px";
+
+  },5000);
+
+},7000);
+
+</script>
+
+</body>
+</html>
